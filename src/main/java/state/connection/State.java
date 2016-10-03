@@ -15,4 +15,8 @@ public abstract class State {
     public abstract void enviar(Conexion conexion, String msg);
     
     public abstract void recibir(Conexion conexion, int respuesta);
+    
+    protected void noPermitido() {
+        throw new UnsupportedOperationException("Acción no permitida... ");
+    }
 }
