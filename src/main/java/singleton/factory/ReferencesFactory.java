@@ -8,9 +8,15 @@ public class ReferencesFactory {
 
     private int reference;
 
-    public ReferencesFactory() {
+    private static ReferencesFactory referencesFactory = new ReferencesFactory();
+
+    private ReferencesFactory() {
         this.references = new HashMap<>();
         this.reference = 0;
+    }
+
+    public static ReferencesFactory getFactory() {
+        return referencesFactory;
     }
 
     public int getReference(String key) {
