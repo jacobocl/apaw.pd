@@ -3,8 +3,11 @@ package factoryMethod.naturalNumber;
 public abstract class NaturalNumber {
     private int value;
 
-    public NaturalNumber(int value) {
+    private String[] textValue;
+
+    public NaturalNumber(int value, String[] textValue) {
         this.setValue(value);
+        this.textValue = textValue;
     }
 
     public int getValue() {
@@ -20,6 +23,13 @@ public abstract class NaturalNumber {
         this.setValue(this.value + value);
     }
 
-    public abstract String getTextValue();
+    public String getTextValue() {
+        assert textValue != null;
+        if (this.getValue() < textValue.length) {
+            return textValue[this.getValue()];
+        } else {
+            return "???";
+        }
+    }
 
 }

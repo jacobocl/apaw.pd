@@ -2,19 +2,9 @@ package factoryMethod.naturalNumber;
 
 public class NaturalNumberFr extends NaturalNumber {
 
-    private static final String[] textValue = {"zéro", "un", "deux", "trois", "quatre", "cinq"};
+    private static final String[] textValuesFr = {"zéro", "un", "deux", "trois", "quatre", "cinq"};
 
     public NaturalNumberFr(int value) {
-        super(value);
+        super(value, textValuesFr);
     }
-
-    @Override
-    public String getTextValue() {
-        if (super.getValue() < textValue.length) {
-            return NaturalNumberFr.textValue[super.getValue()];
-        } else {
-            return "???";
-        }
-    }
-
 }
