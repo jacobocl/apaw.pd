@@ -1,7 +1,7 @@
 package factoryMethod.naturalNumber;
 
 public class NaturalNumberEn extends NaturalNumber {
-    
+
     private static final String[] textValue = {"one", "two", "three", "four", "five"};
 
     public NaturalNumberEn(int value) {
@@ -9,7 +9,7 @@ public class NaturalNumberEn extends NaturalNumber {
     }
 
     @Override
-    public String getTextValue()  {
+    public String getTextValue() {
         if (super.getValue() < textValue.length) {
             return NaturalNumberEn.textValue[super.getValue()];
         } else {
