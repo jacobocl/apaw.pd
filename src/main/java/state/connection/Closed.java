@@ -16,24 +16,4 @@ public class Closed extends State {
     public void cerrar(Conexion conexion) {
     }
 
-    @Override
-    public void parar(Conexion conexion) {
-        noPermitido();
-    }
-
-    @Override
-    public void iniciar(Conexion conexion) {
-        noPermitido();
-    }
-
-    @Override
-    public void enviar(Conexion conexion, String msg) {
-        noPermitido();
-    }
-
-    @Override
-    public void recibir(Conexion conexion, int respuesta) {
-        noPermitido();
-    }
-
 }
