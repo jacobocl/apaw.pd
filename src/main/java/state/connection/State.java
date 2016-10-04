@@ -4,19 +4,31 @@ public abstract class State {
     
     public abstract Estado getEstado();
     
-    public abstract void abrir(Conexion conexion);
+    public void abrir(Conexion conexion){
+        noPermitido();
+    }
     
-    public abstract void cerrar(Conexion conexion);
+    public void cerrar(Conexion conexion){
+        noPermitido();
+    }
     
-    public abstract void parar(Conexion conexion);
+    public void parar(Conexion conexion){
+        noPermitido();
+    }
     
-    public abstract void iniciar(Conexion conexion);
+    public void iniciar(Conexion conexion){
+        noPermitido();
+    }
     
-    public abstract void enviar(Conexion conexion, String msg);
+    public void enviar(Conexion conexion, String msg){
+        noPermitido();
+    }
     
-    public abstract void recibir(Conexion conexion, int respuesta);
+    public void recibir(Conexion conexion, int respuesta){
+        noPermitido();
+    }
     
-    protected void noPermitido() {
+    private void noPermitido() {
         throw new UnsupportedOperationException("Acción no permitida... ");
     }
 }

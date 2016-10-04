@@ -31,9 +31,4 @@ public class Ready extends State {
         conexion.setState(new Waiting());
     }
 
-    @Override
-    public void recibir(Conexion conexion, int respuesta) {
-        noPermitido();
-    }
-
 }
