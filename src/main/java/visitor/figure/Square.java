@@ -9,12 +9,10 @@ public class Square extends Figure {
         this.side = side;
     }
 
-    @Override
-    public double area() {
-        return side * side;
+    public double getSide() {
+        return side;
     }
 
-    @Override
     public double numberOfSides() {
         return 4;
     }
@@ -24,4 +22,8 @@ public class Square extends Figure {
         return super.toString();
     }
 
+    @Override
+    public void accept(FigureVisitor figureVisitor) {
+        figureVisitor.visitSquare(this);
+    }
 }

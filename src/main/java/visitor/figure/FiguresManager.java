@@ -16,19 +16,19 @@ public class FiguresManager {
     }
 
     public double totalArea() {
-        double result = 0;
+        Area area = new Area();
         for (Figure figure : figures) {
-            result += figure.area();
+            figure.accept(area);
         }
-        return result;
+        return area.getArea();
     }
 
     public double totalNumberOfSides() {
-        double result = 0;
+        NumberOfSides numberOfSides = new NumberOfSides();
         for (Figure figure : figures) {
-            result += figure.numberOfSides();
+            figure.accept(numberOfSides);
         }
-        return result;
+        return numberOfSides.getTotalSides();
     }
 
 }
