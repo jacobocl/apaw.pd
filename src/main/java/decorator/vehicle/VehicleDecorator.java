@@ -2,7 +2,7 @@ package decorator.vehicle;
 
 public abstract class VehicleDecorator extends VehicleComponent {
     
-    VehicleComponent vehicleComponent;
+    private VehicleComponent vehicleComponent;
 
     public VehicleDecorator(double price, String description, VehicleComponent vehicleComponent) {
         super(price, description);
