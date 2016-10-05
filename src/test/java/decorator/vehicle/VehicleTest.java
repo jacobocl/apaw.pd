@@ -7,7 +7,7 @@ import org.junit.Test;
 
 public class VehicleTest {
     
-    VehicleComponent vehicle;
+    private VehicleComponent vehicle;
     
     @Before
     public void before() {
