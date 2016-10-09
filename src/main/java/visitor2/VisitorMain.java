@@ -3,6 +3,8 @@ package visitor2;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import upm.jbb.IO;
+
 public final class VisitorMain {
     private Collection<Element> coleccion = new ArrayList<Element>();
 
@@ -18,5 +20,18 @@ public final class VisitorMain {
         for (Element elemento : coleccion) {
             elemento.accept(v1);
         }
+    }
+    
+    public void visitador2() {
+        Visitor2 v2 = new Visitor2();
+        for (Element elemento : coleccion) {
+            elemento.accept(v2);
+        }
+        System.out.println("ElementA: " + v2.getAs());
+        System.out.println("ElementB: " + v2.getBs());
+    }
+    
+    public static void main(String[] args) {
+        IO.getIO().addView(new VisitorMain());
     }
 }
