@@ -2,8 +2,8 @@ package command.calculator;
 
 public interface Comando {
 
-    String name();
+    public String name();
 
-    void execute();
+    public void execute();
     
 }
