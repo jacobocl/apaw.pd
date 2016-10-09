@@ -17,13 +17,13 @@ public class FactoriaCaracter {
         return factoriaCaracter;
     }
 
-    public Caracter get(char caracter) {
-        if (caracteres.containsKey(caracter)) {
-            return caracteres.get(caracter);
+    public Caracter get(char c) {
+        if (caracteres.containsKey(c)) {
+            return caracteres.get(c);
         } else {
-            Caracter caracterTexto = new Caracter(caracter);
-            caracteres.put(caracter, caracterTexto);
-            return caracterTexto;
+            Caracter caracter = new Caracter(c);
+            caracteres.put(c, caracter);
+            return caracter;
         }
     }
 }

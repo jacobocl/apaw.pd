@@ -2,7 +2,7 @@ package text;
 
 public class Caracter extends Componente {
     
-    char caracter;
+    private char caracter;
 
     public Caracter(char caracter) {
         super(false);
