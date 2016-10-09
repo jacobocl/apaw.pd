@@ -19,10 +19,4 @@ public abstract class ComandoConcreto implements Comando {
         return IO.getIO().readInt();
     }
 
-    @Override
-    public abstract String name();
-
-    @Override
-    public abstract void execute();
-
 }
